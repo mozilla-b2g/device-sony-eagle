@@ -12,4 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/eagle.mk
+$(call inherit-product, device/sony/eagle/aosp_d2303.mk)
+
+PRODUCT_NAME := eagle
+PRODUCT_DEVICE := eagle
+PRODUCT_MODEL := Xperia M2 (B2G)
+
+GAIA_DEV_PIXELS_PER_PX := 2
+BOOTANIMATION_ASSET_SIZE := qHD
+
+PRODUCT_COPY_FILES += \
+    device/sony/eagle/bootrec-device:root/sbin/bootrec-device
+
+$(call inherit-product-if-exists, vendor/sony/eagle-blobs/eagle-vendor-blobs.mk)
