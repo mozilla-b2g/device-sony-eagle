@@ -21,4 +21,7 @@ PRODUCT_NAME := eagle
 PRODUCT_DEVICE := eagle
 PRODUCT_MODEL := Xperia M2 (B2G)
 
+PRODUCT_COPY_FILES += \
+    device/sony/eagle/bootrec-device:root/sbin/bootrec-device
+
 $(call inherit-product-if-exists, vendor/sony/eagle-blobs/eagle-vendor-blobs.mk)
