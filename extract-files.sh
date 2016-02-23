@@ -16,9 +16,6 @@
 
 DEVICE=eagle
 MANUFACTURER=sony
+STOCK=18.6.A.0.182
 
-if [ ! -f "../../../vendor/${MANUFACTURER}/${DEVICE}/${DEVICE}-partial.mk" ]; then
-    pushd ../../../
-        device/${MANUFACTURER}/yukon/download-sony-blobs.sh || exit 1
-    popd
-fi;
+. ../common/extract-files.sh

@@ -14,12 +14,12 @@
 
 $(call inherit-product, device/sony/eagle/aosp_d2303.mk)
 
+GAIA_DEV_PIXELS_PER_PX := 2
+BOOTANIMATION_ASSET_SIZE := qHD
+
 PRODUCT_NAME := eagle
 PRODUCT_DEVICE := eagle
 PRODUCT_MODEL := Xperia M2 (B2G)
-
-GAIA_DEV_PIXELS_PER_PX := 2
-BOOTANIMATION_ASSET_SIZE := qHD
 
 PRODUCT_COPY_FILES += \
     device/sony/eagle/bootrec-device:root/sbin/bootrec-device
